@@ -4,7 +4,7 @@ import AddBook from '../pages/add-book';
 
 const routes = {
     '/': () => <Home />,
-    '/add-book': () => <AddBook edit={false} request={'add'}/>,
+    '/add-book': () => <AddBook request={'add'}/>,
 }
 
 export default routes;
