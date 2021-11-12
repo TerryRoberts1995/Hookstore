@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Cookies from 'js-cookie';
 import Book from '../book/book';
 import AddBook from './add-book';
 
 export default function Home() {
     const [allBooks, setAllBooks] = useState([]);
+    const [loggedIn, setLoggedIn] = useState(false);
     const [bookToEdit, setBookToEdit] = useState({});
     const [editMode, setEditMode] = useState(false);
 
@@ -48,12 +50,14 @@ export default function Home() {
 
     useEffect(() => {
         getAllBooks();
-        setEditMode(false);
+        if(Cookies.get('username')) {
+            setLoggedIn(true);
+        }
     },[]);
 
     return (
         <div className="home-page-container">
-            <h1 id="home-title">Home/All Books</h1>
+            <h1 id="home-title">{loggedIn ? Cookies.get('username') : ''} Home/All Books</h1>
             {editMode ? <AddBook book={bookToEdit} edit={editMode} request={'update'} handleEditSubmit={handleEditSubmit}/> : renderBooks()}
         </div>
     );

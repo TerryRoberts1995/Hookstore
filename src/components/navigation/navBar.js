@@ -16,6 +16,18 @@ export default function NavBar() {
                         Add-Book
                     </A>
                 </div>
+
+                <div className='nav-link'>
+                    <A className='link' href='/sign-up'>
+                        Sign-up
+                    </A>
+                </div>
+
+                <div className='nav-link'>
+                    <A className='link' href='/login'>
+                        Login
+                    </A>
+                </div>
             </div>
         </div>
     );

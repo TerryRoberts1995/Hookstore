@@ -12,7 +12,6 @@ export default function AddBook(props) {
     const [endPoint, setEndPoint] = useState('');
 
     const handleSubmit = (e) => {
-        console.log(genre)
         e.preventDefault();
 
         fetch(endPoint, {
@@ -29,6 +28,7 @@ export default function AddBook(props) {
             })
         })
         .then(res => {
+            console.log(res);
             if(props.edit === true) {
                 props.handleEditSubmit()
             } else {
