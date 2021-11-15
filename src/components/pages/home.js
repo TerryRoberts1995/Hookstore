@@ -16,7 +16,7 @@ export default function Home() {
             setAllBooks(res.data)
         })
         .catch(error => {
-            console.log('An Error has occured while fetching your Books.', error);
+            console.log('An error has occured while fetching your Books.', error);
         });
     } 
 
@@ -24,6 +24,7 @@ export default function Home() {
         setBookToEdit(book);
         setEditMode(true);
     }
+    
     const handleEditSubmit = () => {
         setEditMode(false);
         getAllBooks();
