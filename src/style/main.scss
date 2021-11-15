@@ -27,7 +27,9 @@ body {
     justify-items: center;
 }
 
-
+@import './mixins.scss';
 @import './navBar.scss';
 @import './home.scss';
+@import './add-book.scss';
+@import './sign-up.scss';
 @import './book.scss';

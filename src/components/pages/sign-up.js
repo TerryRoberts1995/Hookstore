@@ -59,7 +59,7 @@ export default function SignUp() {
                 <input type="text" placeholder="Username" value={username} name="username" onChange={(e) => setUsername(e.target.value)}/>
                 <input type="text" placeholder="Password" value={password} name="password" onChange={(e) => setPassword(e.target.value)}/>
                 <input type="text" placeholder="Confirm Password" value={confirmPassword} name="confirmPassword" onChange={(e) => setConfirmPassword(e.target.value)}/>
-                <button type="submit">Submit</button>
+                <button className ="submit-btn" type="submit">Submit</button>
             </form>
             <h6 style={{visibility: error ? 'visible' : 'hidden'}}>{errorMessage}</h6>
         </div>

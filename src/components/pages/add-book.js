@@ -66,7 +66,7 @@ export default function AddBook(props) {
                 <input type='text' placeholder='Genre' name='genre' onChange={(e) => setGenre(e.target.value)} defaultValue={bookToEdit ? bookToEdit.genre : ''}/>
             </div>
 
-            <button type='submit'>Submit</button>
+            <button className="submit-btn" type='submit'>Submit</button>
 
         </form>
     );
