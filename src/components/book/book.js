@@ -4,7 +4,7 @@ export default function Book(props) {
     const {title, author, review, genre, id} = props.book;
 
     return (
-        <div className="book-container">
+        <div key={id} className="book-container">
             <div className="title">{title}</div>
             <div className="author">{author}</div>
             <div className='genre'>{genre}</div>

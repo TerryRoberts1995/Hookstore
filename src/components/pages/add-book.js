@@ -41,10 +41,10 @@ export default function AddBook(props) {
 
     useEffect(() => {
         if(requestType === 'add') {
-            setEndPoint(`http://127.0.0.1:5000/book/add`);
+            setEndPoint(`https://my-class-bookstore-api.herokuapp.com/book/add`);
             setRequest('POST');
         } else if(requestType === 'update') {
-            setEndPoint(`http://127.0.0.1:5000/book/update/${bookToEdit.id}`);
+            setEndPoint(`https://my-class-bookstore-api.herokuapp.com/book/update/${bookToEdit.id}`);
             setRequest('PUT');
 
             if(bookToEdit) {

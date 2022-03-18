@@ -19,7 +19,7 @@ export default function SignUp() {
             setError(true);
             setErrorMessage('Error: The passwords are not the same. ');
         } else {
-            fetch('http://127.0.0.1:5000/user/add', {
+            fetch('https://my-class-bookstore-api.herokuapp.com/user/add', {
                 method: "POST",
                 headers: {"content-type" : "application/json"},
                 body: JSON.stringify({

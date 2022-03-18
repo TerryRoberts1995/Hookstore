@@ -11,7 +11,7 @@ export default function Home() {
     const [editMode, setEditMode] = useState(false);
 
     const getAllBooks = () => {
-        axios.get('http://127.0.0.1:5000/book/get')
+        axios.get('https://my-class-bookstore-api.herokuapp.com/book/get')
         .then(res => {
             setAllBooks(res.data)
         })
@@ -32,7 +32,7 @@ export default function Home() {
 
     const handleDeleteClick = (id) => {
 
-        axios.delete(`http://127.0.0.1:5000/book/delete/${id}`)
+        axios.delete(`https://my-class-bookstore-api.herokuapp.com/book/delete/${id}`)
         .then(res => {
             setAllBooks(allBooks.filter(book => {
                 return book.id !== id;
@@ -55,7 +55,7 @@ export default function Home() {
             setLoggedIn(true);
         }
     },[]);
-
+    console.log(allBooks)
     return (
         <div className="home-page-container">
             <h1 id="home-title">{loggedIn ? Cookies.get('username') : ''} Home/All Books</h1>
@@ -63,3 +63,4 @@ export default function Home() {
         </div>
     );
 } 
+
